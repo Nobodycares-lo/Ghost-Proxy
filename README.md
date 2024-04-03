@@ -6,7 +6,7 @@ A Sleek and fast Innovative Web Proxy.
 
 <img src="https://github.com/Nobodycares-lo/Ghost-Proxy/blob/main/screen.png"></p>
 
-(Join Our Discord)[https://discord.gg/mBje25Yqkk]
+[Join Our Discord](https://discord.gg/mBje25Yqkk)
 
 
 
