@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--NOBODYCARES IS A SKIDDY KID AF-->
+    <!-- Define Style in CSS -->
+    <style>
+        body {
+            background-color: #171717;
+            color: grey;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+
+        .topbar {
+            background-color: #333;
+            overflow: hidden;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+            .topbar a {
+                color: #333;
+                text-align: center;
+                padding: 10px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-right: auto;
+            margin-left: 10px;
+        }
+
+        .search {
+            padding: 15px 18px;
+            border: none;
+            width: 1500px; 
+            border-radius: 5px;
+            background-color: floralwhite;
+            color: var(--main-text-color);
+            outline: none;
+            margin-right: 10px;
+        }
+
+            .search:focus::placeholder {
+                color: floralwhite;
+                padding: 20px 15px;
+            }
+            .discbtn {
+                color:grey;
+                padding: 10px 15px;
+            }
+
+        .action-btns {
+            display: flex;
+            align-items: center;
+        }
+
+        .material-symbols-outlined {
+            padding: 10px;
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        p.ex2 {
+            font-size: 50px;
+            color: white;
+        }
+
+        p {
+            color: white;
+            padding: 20px 15px;
+        }
+
+        xn {
+            font-size: 30;
+        }
+        .games {
+            font-size: 20;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!--TopBar-->
+    <div class="topbar">
+        <a href="/index.html">
+            <p align="center"><img src="ghost.png" height="70"></p>
+        </a>
+
+        <form class="inputcontainermain" id="uv-form">
+            <input class="search" type="text" id="uv-address" placeholder="Enter Search or URL here">
+            <input id="uv-search-engine" value="https://www.google.com/search?q=%s" type="hidden">
+        </form>
+        <a href="/school/index.html">
+            <p>Games</p>
+            <a href="https://discord.gg/m3Q87uHEN3">
+                <p>Discord</p>
+
+</div>
+        <a class="active"></a>
+    </div>
+    <div>
+        <p align="center"><img src="ghost.png" height="200"></p>
+        <center>
+
+            <p class="ex2">Ghost Proxy</p>
+            <h2><span id="subtitle">...</span></h2>
+        </center>
+    </div>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFWKKRRXLT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WFWKKRRXLT');
+    </script>
+    <!--ye-->
+    <script>
+        function changeSub(num) {
+            document.getElementById("subtitle").innerText = tell[num];
+        }
+
+        var tell = [];
+        tell[0] = "Nobodycares is a skiddy kid af";
+        tell[1] = "Join Our Discord! https://discord.gg/mBje25Yqkk";
+        tell[2] = "What even is that?";
+        tell[3] = "You need help";
+        tell[4] = "Get Recked";
+        tell[5] = "Hate them damn admins";
+        tell[6] = "Ghost is crazy";
+        tell[7] = "CoolOnlineGames";
+        tell[8] = "got suspended again lmao";
+        tell[9] = "ur funny";
+        tell[10] = "LOL";
+        tell[11] = "got taken down fr fr";
+        tell[12] = "help me";
+        tell[13] = "proxys go crazy right now";
+        tell[14] = "made by a student (crazy right)";
+        tell[15] = "i got a glock in my rari";
+        tell[16] = "gren ";
+        tell[17] = "im kanye west";
+        tell[18] = "David is the best";
+        tell[19] = "Ghost on crack!";
+        tell[20] = "unblockers go crazy rn!";
+        tell[20] = "76.138.200.152 (your ip)";
+        tell[21] = "Free for all";
+        tell[22] = "A wise man once told me to use Ghost Proxy";
+        tell[22] = "i need starz plz https://github.com/Nobodycares-lo/Ghost-Proxy ";
+
+
+        var howmany = tell.length;
+        var bRand = 0;
+        bRand = Math.random();
+        bRand = Math.floor(bRand * howmany);
+        sayWhat = tell[bRand];
+        document.getElementById("subtitle").innerText = sayWhat;
+
+        function changeSplash(num) {
+            document.getElementById("subtitle").innerText = tell[num];
+            var ret = "Set current splash to splash " + num + ", " + tell[num];
+            return ret;
+        }
+
+    </script>
+
+    <p align="center">© Copyright Ghost Network 2024</p
+</body>
+
+</html>
