@@ -7,6 +7,8 @@ A Sleek and fast Innovative Web Proxy.
 <img src="https://github.com/Nobodycares-lo/Ghost-Proxy/blob/main/screen.png"></p>
 
 **Thanks to Titanium Network For [Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet)**
+
+
 [Join Our Discord](https://discord.gg/mBje25Yqkk)
 
 
