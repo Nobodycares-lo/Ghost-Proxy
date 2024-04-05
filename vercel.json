@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "Dockerfile",
-      "use": "dockerfile"
+      "src": "src/index.js",
+      "use": "src/index.js"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "Dockerfile"
+      "dest": "src/index.js"
     }
   ]
 }
