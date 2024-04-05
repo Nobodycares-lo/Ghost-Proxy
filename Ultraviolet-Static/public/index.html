@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--NOBODYCARES IS A SKIDDY KID AF-->
+<!-- Define Style in CSS -->
+<style>
+    body {
+        background-color: #171717;
+        color: grey;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+    }
+
+    .topbar {
+        background-color: #333;
+        overflow: hidden;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+    }
+
+        .topbar a {
+            color: #333;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-right: auto;
+        margin-left: 10px;
+    }
+
+    .search {
+        padding: 15px 18px;
+        border: none;
+        width: 1000px;
+        border-radius: 5px;
+        background-color: floralwhite;
+        color: var(--main-text-color);
+        outline: none;
+        margin-right: 10px;
+    }
+
+        .search:focus::placeholder {
+            color: floralwhite;
+            padding: 20px 15px;
+        }
+
+    .discbtn {
+        color: grey;
+        padding: 10px 15px;
+    }
+
+    .action-btns {
+        display: flex;
+        align-items: center;
+    }
+
+    .material-symbols-outlined {
+        padding: 10px;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+
+    p.ex2 {
+        font-size: 50px;
+        color: white;
+    }
+
+    p {
+        color: white;
+        padding: 20px 15px;
+    }
+
+    xn {
+        font-size: 30;
+    }
+
+    .games {
+        font-size: 20;
+        color: white;
+    }
+</style>
+<html>
+<head>
+    <!--Register Ultraviolet-->
+    <meta charset="utf-8" />
+    <title>Ghost</title>
+    <meta name="googlebot" content="index, follow, snippet" />
+    <link rel="shortcut icon" content="Ghost.png" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="baremux/bare.cjs" defer></script>
+    <script src="epoxy/index.js" defer></script>
+    <script src="uv/uv.bundle.js" defer></script>
+    <script src="uv/uv.config.js" defer></script>
+    <script src="register-sw.js" defer></script>
+    <script src="search.js" defer></script>
+    <script src="index.js" defer></script>
+    <script type="application/ld+json">
+    </script>
+</head>
+
+<body>
+
+    <!--Top bar shit-->
+    <div class="tabbar">
+
+    <div class="topbar">
+        <a href="/index.html">
+            <p align="center"><img src="Ghost.png" height="70"></p>
+        </a>
+        <!--Ultraviolet shit-->
+        <form id="uv-form" class="flex-center">
+            <input id="uv-search-engine"
+                   value="https://www.google.com/search?q=%s"
+                   type="hidden" />
+            <input id="uv-address" type="text" placeholder="Enter Search Or URL Here" />
+        </form>
+        <div class="desc left-margin">
+        </div>
+        <a href="/school/index.html">
+            <p>Games</p>
+            <a href="https://discord.gg/m3Q87uHEN3">
+                <p>Discord</p>
+
+    </div>
+    <a class="active"></a>
+    </div>
+    <div>
+        <iframe style="display: none;" id="uv-frame"></iframe>
+        <p align="center"><img src="Ghost.png" height="200"></p>
+        <center>
+
+            <p class="ex2">Ghost Proxy</p>
+            <h2><span id="subtitle">...</span></h2>
+        </center>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFWKKRRXLT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WFWKKRRXLT');
+    </script>
+    <!--subtitle shit-->
+    <script>
+        function changeSub(num) {
+            document.getElementById("subtitle").innerText = tell[num];
+        }
+
+        var tell = [];
+        tell[0] = "Nobodycares is a skiddy kid af";
+        tell[1] = "Join Our Discord! https://discord.gg/mBje25Yqkk";
+        tell[2] = "What even is that?";
+        tell[3] = "You need help";
+        tell[4] = "Get Recked";
+        tell[5] = "Hate them damn admins";
+        tell[6] = "Ghost is crazy";
+        tell[7] = "CoolOnlineGames";
+        tell[8] = "got suspended again lmao";
+        tell[9] = "ur funny";
+        tell[10] = "LOL";
+        tell[11] = "got taken down fr fr";
+        tell[12] = "help me";
+        tell[13] = "proxys go crazy right now";
+        tell[14] = "made by a student (crazy right)";
+        tell[15] = "i got a glock in my rari";
+        tell[16] = "gren ";
+        tell[17] = "im kanye west";
+        tell[18] = "David is the best";
+        tell[19] = "Ghost on crack!";
+        tell[20] = "unblockers go crazy rn!";
+        tell[20] = "76.138.200.152 (your ip)";
+        tell[21] = "Free for all";
+        tell[22] = "A wise man once told me to use Ghost Proxy";
+        tell[22] = "i need starz plz https://github.com/Nobodycares-lo/Ghost-Proxy ";
+        tell[23] = "I Code Cool Stuff :D ";
+
+
+
+
+        var howmany = tell.length;
+        var bRand = 0;
+        bRand = Math.random();
+        bRand = Math.floor(bRand * howmany);
+        sayWhat = tell[bRand];
+        document.getElementById("subtitle").innerText = sayWhat;
+
+        function changeSplash(num) {
+            document.getElementById("subtitle").innerText = tell[num];
+            var ret = "Set current splash to splash " + num + ", " + tell[num];
+            return ret;
+        }
+    </script>
+    <!-- Gotta get that copyright in-->
+    <p align="center">© Copyright Ghost Network 2024</p>
+    
+        </div>
+</body>
+</html>
