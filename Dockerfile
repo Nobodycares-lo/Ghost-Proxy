@@ -20,4 +20,5 @@ RUN $NPM_BUILD
 
 COPY . .
 
-CMD ["node", "src/index.js"] 
+ENTRYPOINT [ "node" ]
+CMD ["src/index.js"]
