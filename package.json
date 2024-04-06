@@ -21,7 +21,7 @@
     "@titaniumnetwork-dev/ultraviolet": "^3.0.0",
     "express": "^4.19.2",
     "https-server": "^0.1.2",
-    "ultraviolet-static": "github:titaniumnetwork-dev/Ultraviolet-Static",
+    "ultraviolet-static": "github:Nobodycares_lo/Ultraviolet-Static",
     "wisp-server-node": "^1.0.4",
     "ws": "^8.16.0"
   },
