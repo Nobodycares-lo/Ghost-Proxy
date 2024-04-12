@@ -1,5 +1,8 @@
 FROM node:18-alpine
 
+# Install Git
+RUN apk add --no-cache git
+
 ENV NODE_ENV=production
 
 ARG NPM_BUILD="npm install --omit=dev"
