@@ -71,10 +71,78 @@
     p {
         color: white;
         padding: 20px 15px;
-    }
+    }  
 
     xn {
         font-size: 30;
+    }
+
+    .mint {
+        background-color: #b4ebcc;
+        color: white;
+    }
+        .mint .topbar {
+            background-color: #8cb79f;
+            overflow: hidden;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            z-index: 1;
+        }
+
+            .mint .topbar a {
+                color: white;
+                text-align: center;
+                padding: 10px;
+                text-decoration: none;
+                font-size: 17px;
+                z-index: 1;
+            }
+
+        .mint .dropdown {
+            position: relative;
+            display: inline-block;
+            left: 150px;
+        }
+
+        .mint .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 16px 12px;
+            z-index: 1;
+        }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        left: 150px;
+        color: white;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #171717;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 16px 12px;
+        z-index: 1;
+        color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 17px;
+        font-family: 'Poppins', sans-serif;
     }
 </style>
 <html>
@@ -90,10 +158,10 @@
     <script src="register-sw.js" defer></script>
     <script src="search.js" defer></script>
     <script src="index.js" defer></script>
-        <script src="baremux/bare.cjs" defer></script>
+    <script src="baremux/bare.cjs" defer></script>
     <script src="epoxy/index.js" defer></script>
     <script type="application/ld+json"></script>
-    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,1,0">
     <script>
         if ("serviceWorker" in navigator) {
             window.addEventListener("load", () => {
@@ -102,7 +170,6 @@
                 });
             });
         }
-    </script>
     </script>
 </head>
 
@@ -113,7 +180,7 @@
     <div class="tabbar">
         <div class="topbar">
             <a href="/index.html">
-                <p align="center"><img src="Ghost.png" height="70"></p>
+                <p align="center"><img id="logo" src="Ghost.png" height="70"></p>
             </a>
             <!--Ultraviolet shit-->
             <form id="uv-form" class="flex-center">
@@ -129,15 +196,35 @@
             <div class="desc left-margin">
             </div>
             <a href="/school/index.html">
-                <p>Games</p>
-                <a href="https://discord.gg/m3Q87uHEN3">
-                    <p>Discord</p>
-
+            </a>
+                <span class="material-symbols-outlined">
+                    stadia_controller
+                </span>
+                <a href="/school/index.html">
+                    <p>Games</p>
+                </a>
+            </a>
+            <a href="https://discord.gg/m3Q87uHEN3">
+                <p>Discord</p>
+            </a>
+            <span class="material-symbols-outlined">
+                settings
+            </span>
+            <button onclick="settings()">Settings</button>
+            <div class="dropdown">
+                <span>Themes</span>
+                <div class="dropdown-content">
+                    <button onclick="minttheme()">Mint</button>
+                    <button onclick="ghosttheme()">Ghost</button>
+                    <button onclick="Blue()">Blue</button>
+                </div>
+                </div>
+                <a class="active"></a>
+            </div>
         </div>
-        <a class="active"></a>
-    </div>
     <div>
-        <p align="center"><img src="Ghost.png" height="200"></p>
+
+        <p align="center"><img id="logo2" src="Ghost.png" height="200"></p>
         <center>
 
             <p class="ex2">Ghost Proxy</p>
@@ -206,9 +293,83 @@
                 return ret;
             }
         </script>
+        <!--Settings-->
+        <script>
+            function settings() {
+                document.getElementById("settingsiframe").style.zIndex = "1";
+            }
+        </script>
+        <!--Theme 1 (mint)-->
+        <script>
+            function minttheme() {
+                var element = document.body;
+                var hasblueTheme = element.classList.contains("blue");
+                var hasMintTheme = element.classList.contains("mint");
+                var hasGhostTheme = element.classList.contains("ghost-theme");
+                // Remove existing themes if present
+                if (hasGhostTheme) {
+                    element.classList.remove("ghost-theme");
+                }
+
+                if (hasMintTheme) {
+                    element.classList.remove("blue");
+                }
+
+                if (!hasMintTheme) {
+                    element.classList.add("mint");
+                    document.getElementById('logo').src = 'mint_logo.png';
+                    document.getElementById('logo2').src = 'mint_logo.png';
+                }
+            }
+        </script>
+        <!--Theme 2 (Ghost)-->
+        <script>
+            function ghosttheme() {
+                var element = document.body;
+                var hasblueTheme = element.classList.contains("blue");
+                var hasMintTheme = element.classList.contains("mint");
+                var hasGhostTheme = element.classList.contains("ghost-theme");
+                // Remove existing themes if present
+                if (hasGhostTheme) {
+                    element.classList.remove("blue");
+                }
+
+                if (hasMintTheme) {
+                    element.classList.remove("mint");
+                }
+                element.classList.add("ghost-theme");
+                document.getElementById('logo').src = 'Ghost.png';
+                document.getElementById('logo2').src = 'Ghost.png';
+            }
+        </script>
+        <!--Theme 3 Blue-->
+        <script>
+            function blue() {
+                var element = document.body;
+                var hasMintTheme = element.classList.contains("mint");
+                var hasblueTheme = element.classList.contains("blue");
+                var hasGhostTheme = element.classList.contains("ghost-theme");
+
+                // Remove existing themes if present
+                if (hasGhostTheme) {
+                    element.classList.remove("ghost-theme");
+                }
+
+                if (hasMintTheme) {
+                    element.classList.remove("mint");
+                }
+
+                // Add the blue theme
+                element.classList.add("blue");
+                document.getElementById('logo').src = 'ghostblue.png';
+                document.getElementById('logo2').src = 'ghostblue.png';
+            }
+        </script>
+
         <!-- Gotta get that copyright in-->
         <p align="center">© Copyright Ghost Network 2024</p>
         <iframe style="display: none;" id="uv-frame"></iframe>
+        <iframe style="display: none;" id="settingsiframe"></iframe>
     </div>
 </body>
 </html>
