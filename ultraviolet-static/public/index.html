@@ -197,12 +197,12 @@
             </div>
             <a href="/school/index.html">
             </a>
-                <span class="material-symbols-outlined">
-                    stadia_controller
-                </span>
-                <a href="/school/index.html">
-                    <p>Games</p>
-                </a>
+            <span class="material-symbols-outlined">
+                stadia_controller
+            </span>
+            <a href="/school/index.html">
+                <p>Games</p>
+            </a>
             </a>
             <a href="https://discord.gg/m3Q87uHEN3">
                 <p>Discord</p>
@@ -218,10 +218,10 @@
                     <button onclick="ghosttheme()">Ghost</button>
                     <button onclick="Blue()">Blue</button>
                 </div>
-                </div>
-                <a class="active"></a>
             </div>
+            <a class="active"></a>
         </div>
+    </div>
     <div>
 
         <p align="center"><img id="logo2" src="Ghost.png" height="200"></p>
@@ -244,52 +244,51 @@
         </script>
         <!--subtitle shit-->
         <script>
+            // Function to change the subtitle
             function changeSub(num) {
                 document.getElementById("subtitle").innerText = tell[num];
             }
 
-            var tell = [];
-            tell[0] = "Nobodycares is a skiddy kid af";
-            tell[1] = "Join Our Discord! https://discord.gg/mBje25Yqkk";
-            tell[2] = "What even is that?";
-            tell[3] = "You need help";
-            tell[4] = "Get Recked";
-            tell[5] = "Hate them damn admins";
-            tell[6] = "Ghost is crazy";
-            tell[7] = "CoolOnlineGames";
-            tell[8] = "got suspended again lmao";
-            tell[9] = "ur funny";
-            tell[10] = "LOL";
-            tell[11] = "got taken down fr fr";
-            tell[12] = "help me";
-            tell[13] = "proxys go crazy right now";
-            tell[14] = "made by a student (crazy right)";
-            tell[15] = "i got a glock in my rari";
-            tell[16] = "gren ";
-            tell[17] = "im kanye west";
-            tell[18] = "David is the best";
-            tell[19] = "Ghost on crack!";
-            tell[20] = "unblockers go crazy rn!";
-            tell[20] = "76.138.200.152 (your ip)";
-            tell[21] = "Free for all";
-            tell[22] = "A wise man once told me to use Ghost Proxy";
-            tell[22] = "i need starz plz https://github.com/Nobodycares-lo/Ghost-Proxy ";
-            tell[23] = "I Code Cool Stuff :D ";
-            tell[23] = "skiddy widdy ";
-
-
-
+            // Change this or add subtitles
+            var tell = [
+                "Nobodycares is a skiddy kid af",
+                "Join Our Discord! https://discord.gg/mBje25Yqkk",
+                "What even is that?",
+                "You need help",
+                "Get Recked",
+                "Hate them damn admins",
+                "Ghost is crazy",
+                "CoolOnlineGames",
+                "got suspended again lmao",
+                "ur funny",
+                "LOL",
+                "got taken down fr fr",
+                "help me",
+                "proxys go crazy right now",
+                "made by a student (crazy right)",
+                "i got a glock in my rari",
+                "gren",
+                "im kanye west",
+                "David is the best",
+                "Ghost on crack!",
+                "unblockers go crazy rn!",
+                "76.138.200.152 (your ip)",
+                "Free for all",
+                "A wise man once told me to use Ghost Proxy",
+                "i need starz plz https://github.com/Nobodycares-lo/Ghost-Proxy",
+                "I Code Cool Stuff :D",
+                "skiddy widdy"
+            ];
 
             var howmany = tell.length;
-            var bRand = 0;
-            bRand = Math.random();
-            bRand = Math.floor(bRand * howmany);
-            sayWhat = tell[bRand];
-            document.getElementById("subtitle").innerText = sayWhat;
+            var randomIndex = Math.floor(Math.random() * howmany);
 
+            document.getElementById("subtitle").innerText = tell[randomIndex];
+
+            // Function to change the subtitle
             function changeSplash(num) {
-                document.getElementById("subtitle").innerText = tell[num];
                 var ret = "Set current splash to splash " + num + ", " + tell[num];
+                document.getElementById("subtitle").innerText = tell[num];
                 return ret;
             }
         </script>
@@ -368,7 +367,6 @@
 
         <!-- Gotta get that copyright in-->
         <p align="center">© Copyright Ghost Network 2024</p>
-        <iframe style="display: none;" id="uv-frame"></iframe>
         <iframe style="display: none;" id="settingsiframe"></iframe>
     </div>
 </body>
