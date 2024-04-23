@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--NOBODYCARES IS A SKIDDY KID AF-->
+<!-- Define Style in CSS -->
+<style>
+    body {
+        background-color: #171717;
+        color: grey;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+    }
+
+    .topbar {
+        background-color: #333;
+        overflow: hidden;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+    }
+
+        .topbar a {
+            color: #333;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 17px;
+            z-index: 1;
+        }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-right: auto;
+        margin-left: 10px;
+        z-index: 1;
+    }
+
+    .search {
+        padding: 15px 18px;
+        border: none;
+        width: 1000px;
+        border-radius: 5px;
+        background-color: floralwhite;
+        color: var(--main-text-color);
+        outline: none;
+        margin-right: 10px;
+        z-index: 1;
+    }
+
+        .search:focus::placeholder {
+            color: floralwhite;
+            padding: 20px 15px;
+            z-index: 1;
+        }
+
+    .material-symbols-outlined {
+        padding: 10px;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        z-index: 1;
+    }
+
+    p.ex2 {
+        font-size: 50px;
+        color: white;
+    }
+
+    p {
+        color: white;
+        padding: 20px 15px;
+    }
+
+    xn {
+        font-size: 30;
+    }
+
+    .mint {
+        background-color: #b4ebcc;
+        color: white;
+    }
+
+        .mint .topbar {
+            background-color: #8cb79f;
+            overflow: hidden;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            z-index: 1;
+        }
+
+            .mint .topbar a {
+                color: white;
+                text-align: center;
+                padding: 10px;
+                text-decoration: none;
+                font-size: 17px;
+                z-index: 1;
+            }
+
+        .mint .dropdown {
+            position: relative;
+            display: inline-block;
+            left: 150px;
+        }
+
+        .mint .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 16px 12px;
+            z-index: 1;
+        }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        left: 150px;
+        color: white;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #171717;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 16px 12px;
+        z-index: 1;
+        color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 17px;
+        font-family: 'Poppins', sans-serif;
+    }
+    input {
+        background: none;
+        font-family: inherit;
+        padding: 0px 17px;
+        height: 48px;
+        border: 1px solid rgb(255, 255, 255, 0.2);
+        color: var(--text-color);
+        border-radius: 3px;
+        outline: none;
+        width: 350px;
+        margin-top: 5px;
+        border-radius: 50px;
+        color: #fff;
+        transition: border-radius 0.1s;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Ghost.png" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,1,0">
+    <link rel="stylesheet" href="index.css" />
+    <title>Ghost</title>
+
+    <!-- Ultraviolet Scripts -->
+    <script src="./uv/uv.bundle.js"></script>
+    <script src="./uv/uv.config.js"></script>
+    <script src="./assets/register-sw.js"></script>
+
+</head>
+
+<body>
+    <!--Top bar shit-->
+
+    <div class="tabbar">
+        <div class="topbar">
+            <a href="/index.html">
+                <p align="center"><img id="logo" src="Ghost.png" height="70"></p>
+            </a>
+            <input type="text" class="input" placeholder="Enter a search or URL">
+            <div class="desc left-margin">
+                <p id="uv-error"></p>
+                <pre id="uv-error-code"></pre>
+            </div>
+            <div class="desc left-margin">
+            </div>
+            <a href="/school/index.html">
+            </a>
+            <span class="material-symbols-outlined">
+                stadia_controller
+            </span>
+            <a href="/school/index.html">
+                <p>Games</p>
+            </a>
+            </a>
+            <a href="https://discord.gg/m3Q87uHEN3">
+                <p>Discord</p>
+            </a>
+            <span class="material-symbols-outlined">
+                settings
+            </span>
+            <button onclick="settings()">Settings</button>
+            <div class="dropdown">
+                <span>Themes</span>
+                <div class="dropdown-content">
+                    <button onclick="minttheme()">Mint</button>
+                    <button onclick="ghosttheme()">Ghost</button>
+                    <button onclick="Blue()">Blue</button>
+                </div>
+            </div>
+            <a class="active"></a>
+        </div>
+    </div>
+    <div>
+
+        <p align="center"><img id="logo2" src="Ghost.png" height="200"></p>
+        <center>
+
+            <p class="ex2">Ghost Proxy</p>
+            <h2><span id="subtitle">...</span></h2>
+        </center>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFWKKRRXLT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-WFWKKRRXLT');
+        </script>
+        <!--subtitle shit-->
+        <script>
+            // Function to change the subtitle
+            function changeSub(num) {
+                document.getElementById("subtitle").innerText = tell[num];
+            }
+
+            // Change this or add subtitles
+            var tell = [
+                "Nobodycares is a skiddy kid af",
+                "Join Our Discord! https://discord.gg/mBje25Yqkk",
+                "What even is that?",
+                "You need help",
+                "Get Recked",
+                "Hate them damn admins",
+                "Ghost is crazy",
+                "CoolOnlineGames",
+                "got suspended again lmao",
+                "ur funny",
+                "LOL",
+                "got taken down fr fr",
+                "help me",
+                "proxys go crazy right now",
+                "made by a student (crazy right)",
+                "i got a glock in my rari",
+                "gren",
+                "im kanye west",
+                "David is the best",
+                "Ghost on crack!",
+                "unblockers go crazy rn!",
+                "76.138.200.152 (your ip)",
+                "Free for all",
+                "A wise man once told me to use Ghost Proxy",
+                "i need starz plz https://github.com/Nobodycares-lo/Ghost-Proxy",
+                "I Code Cool Stuff :D",
+                "skiddy widdy"
+            ];
+
+            var howmany = tell.length;
+            var randomIndex = Math.floor(Math.random() * howmany);
+
+            document.getElementById("subtitle").innerText = tell[randomIndex];
+
+            // Function to change the subtitle
+            function changeSplash(num) {
+                var sub = "Set current splash to splash " + num + ", " + tell[num];
+                document.getElementById("subtitle").innerText = tell[num];
+                return sub;
+            }
+        </script>
+        <!--Settings-->
+        <script>
+            function settings() {
+                document.getElementById("settingsiframe").style.zIndex = "1";
+            }
+        </script>
+        <!--Theme 1 (mint)-->
+        <script>
+            function minttheme() {
+                var element = document.body;
+                var hasblueTheme = element.classList.contains("blue");
+                var hasMintTheme = element.classList.contains("mint");
+                var hasGhostTheme = element.classList.contains("ghost-theme");
+                // Remove existing themes if present
+                if (hasGhostTheme) {
+                    element.classList.remove("ghost-theme");
+                }
+
+                if (hasMintTheme) {
+                    element.classList.remove("blue");
+                }
+
+                if (!hasMintTheme) {
+                    element.classList.add("mint");
+                    document.getElementById('logo').src = 'mint_logo.png';
+                    document.getElementById('logo2').src = 'mint_logo.png';
+                }
+            }
+        </script>
+        <!--Theme 2 (Ghost)-->
+        <script>
+            function ghosttheme() {
+                var element = document.body;
+                var hasblueTheme = element.classList.contains("blue");
+                var hasMintTheme = element.classList.contains("mint");
+                var hasGhostTheme = element.classList.contains("ghost-theme");
+                // Remove existing themes if present
+                if (hasGhostTheme) {
+                    element.classList.remove("blue");
+                }
+
+                if (hasMintTheme) {
+                    element.classList.remove("mint");
+                }
+                element.classList.add("ghost-theme");
+                document.getElementById('logo').src = 'Ghost.png';
+                document.getElementById('logo2').src = 'Ghost.png';
+            }
+        </script>
+        <!--Theme 3 Blue-->
+        <script>
+            function blue() {
+                var element = document.body;
+                var hasMintTheme = element.classList.contains("mint");
+                var hasblueTheme = element.classList.contains("blue");
+                var hasGhostTheme = element.classList.contains("ghost-theme");
+
+                // Remove existing themes if present
+                if (hasGhostTheme) {
+                    element.classList.remove("ghost-theme");
+                }
+
+                if (hasMintTheme) {
+                    element.classList.remove("mint");
+                }
+
+                // Add the blue theme
+                element.classList.add("blue");
+                document.getElementById('logo').src = 'ghostblue.png';
+                document.getElementById('logo2').src = 'ghostblue.png';
+            }
+        </script>
+
+        <!-- Gotta get that copyright in-->
+        <p align="center">© Copyright Ghost Network 2024</p>
+
+        <script src="./assets/script.js" defer></script>
+</body>
+
+</html>
