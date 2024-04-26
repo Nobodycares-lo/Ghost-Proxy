@@ -1,5 +1,4 @@
 
-/* Nobodycares is a skiddy kid af*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
@@ -72,17 +71,10 @@ body {
 
     .gamecontainer p {
         margin-top: 5px;
+        align-text: center;
     }
 .gamecontainer p:hover {
-      margin-top: 10px;
-                color: #fff;
-                position: absolute;
-                bottom: -20px;
-                left: 50%;
-                transform: translateX(-50%);
-                opacity: 0;
-                transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
-                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    align-text: center;
 }
 .gamecontainer img {
     border-radius: 20px;
