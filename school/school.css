@@ -86,6 +86,7 @@ body {
 }
 .gamecontainer img {
     border-radius: 20px;
+    transition: 0.7s;
 }
 .gamecontainer img:hover {
     border-radius: 20px;
