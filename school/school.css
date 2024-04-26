@@ -38,6 +38,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    float: center;
 }
 /* Game Columns*/
 .game-columns {
