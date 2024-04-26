@@ -61,7 +61,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 2.3em;
-    flex-direction: row;
     margin-top: 10px;
 }
 
