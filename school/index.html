@@ -4,6 +4,59 @@
     body {
         background-color: #171717;
     }
+                .game-icon {
+                text-align: center;
+                width: 120px;
+                height: 120px;
+                position: relative;
+                border-radius: 50%;
+                overflow: hidden;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .game-icon button {
+                border: none;
+                background: none;
+                padding: 0;
+                cursor: pointer;
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            .game-icon img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                margin: 0 auto;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .game-icon p {
+                margin-top: 10px;
+                color: #fff;
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            }
+
+            .game-icon:hover {
+                transform: translateY(-5px);
+            }
+
+            .game-icon:hover img {
+                transform: scale(1.1);
+            }
+
+            .game-icon:hover p {
+                bottom: 0;
+                opacity: 1;
+            }
 </style>
 <body>
 
@@ -35,6 +88,13 @@
 <div class="center">
     <div class="game-columns">
         <div class="gamecolumn">
+            <div class="game-icons">
+          <div class="game-icon" data-url="/apps/twitch.html" data-name="Twitch">
+              <button onclick="redirectToApp(this)">
+                  <img src="appicons/twitch.png" alt="Twitch">
+              </button>
+              <p>Twitch</p>
+          </div>
             <div class="gamecontainer">
                 <a href="#">
                     <div class="gamecontainer" data-category="all">
