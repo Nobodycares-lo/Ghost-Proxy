@@ -61,24 +61,64 @@
                 bottom: 0;
                 opacity: 1;
             }
+    .navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.nav-links li:first-child {
+  margin-left: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffd700;
+}
 </style>
 <body>
-
-    <!--Copy and paste the top bar code from the last html cause im too lazy to recode it :skull:-->
-    <div class="topbar">
-        <a href="/index.html">
-            <p align="center"><img src="ghost.png" height="70"></p>
-        </a>
-        <div class="desc left-margin">
-        </div>
-        <a href="/g/index.html">
-            <p>Games</p>
-            <a href="https://discord.gg/m3Q87uHEN3">
-                <p>Discord</p>
-                <a class="active"></a>
-                <div>
-                </div>
+    <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">YourLogo</a>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </div>
+  </nav>
     <center>
        <br>
 <br>
