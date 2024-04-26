@@ -1,5 +1,4 @@
 
-/* Nobodycares is a skiddy kid af*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
@@ -38,31 +37,33 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    float: center;
 }
 /* Game Columns*/
 .game-columns {
     display: flex;
+        justify-content: center;
     justify-content: space-between;
     margin-top: 20px;
-    padding: 0 20px; 
+    padding: 0 20px;
+    background-color: #171717;
 }
 
 .gamecolumn {
-    width: calc(33.33% - 20px); 
-    margin-right: 20px; 
+        justify-content: center;
 }
 /* Game container*/
 .gamecontainer {
+        justify-content: center;
     display: flex;
     flex-wrap: wrap;
     gap: 2.3em;
-    flex-direction: row;
     margin-top: 10px;
 }
 
     .gamecontainer a {
+            justify-content: center;
         display: flex;
-        flex-direction: column;
         align-items: center;
         text-decoration: none;
         color: white;
@@ -70,5 +71,21 @@ body {
 
     .gamecontainer p {
         margin-top: 5px;
+        align-text: center;
     }
+.gamecontainer p:hover {
+    align-text: center;
+}
+.gamecontainer img {
+    border-radius: 20px;
+    transition: 0.7s;
+}
+.gamecontainer img:hover {
+    border-radius: 20px;
+ transform: scale(1.1);
+}
+.gamecontainer img p:hover {
+      bottom: 0;
+                opacity: 1;
+}
     /*END*/
