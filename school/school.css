@@ -73,4 +73,7 @@ body {
     .gamecontainer p {
         margin-top: 5px;
     }
+.gamecontainer img {
+    border-radius: 20px;
+}
     /*END*/
