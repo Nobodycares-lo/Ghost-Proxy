@@ -1,5 +1,5 @@
 self.__uv$config = {
-    prefix: '/service/',
+    prefix: '/uv/ghost~/',
 
     /* Bare server URL */ 
     bare: 'https://tomp.app',
