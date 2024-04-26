@@ -73,7 +73,26 @@ body {
     .gamecontainer p {
         margin-top: 5px;
     }
+.gamecontainer p:hover {
+      margin-top: 10px;
+                color: #fff;
+                position: absolute;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
 .gamecontainer img {
     border-radius: 20px;
+}
+.gamecontainer img:hover {
+    border-radius: 20px;
+ transform: scale(1.1);
+}
+.gamecontainer img p:hover {
+      bottom: 0;
+                opacity: 1;
 }
     /*END*/
