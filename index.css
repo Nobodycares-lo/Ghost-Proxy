@@ -223,7 +223,6 @@ footer a:hover {
 .ghost-theme .dropdown {
     position: relative;
     display: inline-block;
-    left: 150px;
 }
 
     .ghost-theme .dropdown-content {
@@ -268,7 +267,6 @@ footer a:hover {
 .blue .dropdown {
     position: relative;
     display: inline-block;
-    left: 150px;
 }
 
 .blue .dropdown-content {
