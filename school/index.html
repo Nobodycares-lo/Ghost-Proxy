@@ -109,14 +109,22 @@
 }
 </style>
 <body>
-    <nav class="navbar">
+     <nav class="navbar">
     <div class="container">
-      <img style="width:50px;" src="/school/ghost.png"></img>
+      <img style="width:50px;" onclick="window.location.href='/'" src="/school/ghost.png"></img>
+        <br>
+ <input type="text" class="input" placeholder="Search or enter a URL">
+            <div class="desc left-margin">
+                <p id="uv-error"></p>
+                <pre id="uv-error-code"></pre>
+            </div>
+            <div class="desc left-margin">
+            </div>
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/school/">Games</a></li>
+        <li><a href="#">Apps</a></li>
+        <li><a href="/settings/">Settings</a></li>
+            <a class="active"></a>
       </ul>
     </div>
   </nav>
@@ -146,3 +154,6 @@
 </div>
                 </div>
 </body>
+    <script src="/uv/uv.bundle.js"></script>
+    <script src="/uv/uv.config.js"></script>
+    <script src="/assets/register-sw.js"></script>
