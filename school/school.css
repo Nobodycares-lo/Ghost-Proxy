@@ -23,6 +23,7 @@ body {
     padding: 10px 20px;
     display: flex;
     align-items: center;
+    width: 1350px;
 }
 
     .topbar a {

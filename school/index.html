@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="school.css" />
+<link rel="stylesheet" href="/index.css" />
 <style>
     body {
         background-color: #171717;
@@ -11,6 +12,7 @@
                 position: relative;
                 overflow: hidden;
                 transition: transform 0.3s ease-in-out;
+                     border-radius:10px;
             }
 
             .game-icon button {
@@ -20,7 +22,8 @@
                 cursor: pointer;
                 display: block;
                 width: 100%;
-                height: 100%;
+                height: 100%; 
+                border-radius:10px;
             }
 
             .game-icon img {
@@ -40,9 +43,11 @@
                 bottom: -20px;
                 left: 50%;
                 transform: translateX(-50%);
+                font-family: 'Be Vietnam Pro', sans-serif;
                 opacity: 0;
                 transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
                 text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                 border-radius:10px;
             }
 
             .game-icon:hover {
@@ -58,24 +63,65 @@
                 bottom: 0;
                 opacity: 1;
             }
+    .navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.nav-links li:first-child {
+  margin-left: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffd700;
+}
 </style>
 <body>
-
-    <!--Copy and paste the top bar code from the last html cause im too lazy to recode it :skull:-->
-    <div class="topbar">
-        <a href="/index.html">
-            <p align="center"><img src="ghost.png" height="70"></p>
-        </a>
-        <div class="desc left-margin">
-        </div>
-        <a href="/g/index.html">
-            <p>Games</p>
-            <a href="https://discord.gg/m3Q87uHEN3">
-                <p>Discord</p>
-                <a class="active"></a>
-                <div>
-                </div>
+     <nav class="navbar">
+    <div class="container">
+      <img style="width:50px;" onclick="window.location.href='/'" src="/school/ghost.png"></img>
+        <br>
+      <ul class="nav-links">
+        <li><a href="/school/">Games</a></li>
+        <li><a href="/algebra.html">Apps</a></li>
+        <li><a href="/tutors/">Settings</a></li>
+            <a class="active"></a>
+      </ul>
     </div>
+  </nav>
     <center>
        <br>
 <br>
@@ -90,126 +136,53 @@
     <div class="game-columns">
         <div class="gamecolumn">
             <div class="game-icons">
-          <div class="game-icon" data-url="/apps/twitch.html" data-name="Twitch">
-              <button>
-                  <img src="assets/1v1.png" alt="Twitch">
-              </button>
-              <p>Twitch</p>
-          </div>
-            <div class="gamecontainer">
-                <a href="#">
-                    <div class="gamecontainer" data-category="all">
-                        <img width="145" height="145" src="assets/1.png" loading="lazy">
-                    </div>
-                </a>
-                <a href="/school/src/1v1-lol">
-                    <div class="gamecontainer" data-category="all">
-                        <img width="145" height="145" src="assets/1v1.png" loading="lazy">
-                        <p>1v1.lol</p>
-                    </div>
-                </a>
-                <a href="/school/3kho/1v1space/index.html">
-                    <div class="gamecontainer" data-category="all">
-                        <img width="145" height="145" src="3kho/1v1space/splash.png" loading="lazy">
-                    </div>
-                </a>
-                <a href="/school/3kho/2048/index.html">
-                    <div class="gamecontainer" data-category="all">
-                        <img width="145" height="145" src="3kho/2048/2048.png" loading="lazy">
-                    </div>
-                </a>
-                <a href="/school/3kho/10-minutes-till-dawn/index.html">
-                    <div class="gamecontainer" data-category="all">
-                        <img width="145" height="145" src="assets/10 min.png" loading="lazy">
-                    </div>
-                </a>
-                <a href="/school/3kho/among-us/index.html">
-                    <div class="gamecontainer" data-category="all">
-                        <img width="145" height="145" src="3kho/among-us/red.png" loading="lazy">
-                    </div>
-                </a>
-                <a href="/school/3kho/btts/index.html">
-                    <div class="gamecontainer" data-category="all">
-                        <img width="145" height="145" src="3kho/btts/images.png" loading="lazy">
-                    </div>
-                </a>
-                <a href="/school/3kho/.html">
-                    <a href="/school/3kho/100ng/index.html">
-                        <div class="gamecontainer" data-category="all">
-                            <img width="145" height="145" src="assets/100ng.jpg" loading="lazy">
-                        </div>
-                    </a>
-                </a>
-                <a href="/school/3kho/boxing-random/index.html">
-                    <div class="gamecontainer" data-category="all">
-                        <img width="145" height="145" src="assets/box.jpg" loading="lazy">
-                    </div>
-                </a>
-
-                <a href="/school/3kho/doodle-jump/index.html">
-                    <div class="gamecontainer" data-category="all">
-                        <img width="145" height="145" src="assets/doodle.png" loading="lazy">
-                    </div>
-                </a>
-                <a href="/school/3kho/achivementunlocked/index.html">
-                    <div class="gamecontainer" data-category="all">
-                        <img width="145" height="145" src="assets/achivementunlocked.png" loading="lazy">
-                    </div>
-                </a>
-                <a href="/school/3kho/doctor-acorn2/index.html">
-                    <div class="gamecontainer" data-category="all">
-                        <img width="145" height="145" src="assets/acorn.jpg" loading="lazy">
-                    </div>
-                </a>
-                <a href="/school/3kho/alienhominid/index.html">
-                    <div class="gamecontainer" data-category="all">
-                        <img width="145" height="145" src="assets/alienhominid.png" loading="lazy">
-                    </div>
-                </a>
-                <a href="/school/3kho/bitlife/index.html">
-                    <div class="gamecontainer" data-category="all">
-                        <img width="145" height="145" src="assets/bitlife.png" loading="lazy">
-                    </div>
-                </a>
-                <a href="/school/3kho/cookie-clicker/index.html">
-                    <div class="gamecontainer" data-category="all">
-                        <img width="145" height="145" src="assets/cookie1.jpeg" loading="lazy">
-                    </div>
-                </a>
-                <a href="/school/3kho/adarkroom/index.html">
-                    <div class="gamecontainer" data-category="all">
-                        <img width="145" height="145" src="assets/darkroom.png" loading="lazy">
-                    </div>
-                </a>
-            <a href="/school/3kho/bloxors/index.html">
-                <div class="gamecontainer" data-category="all">
-                    <img width="145" height="145" src="assets/block.png" loading="lazy">
+                <div class="game-icon" onclick="window.location.href='/school/src/1v1-lol'">
+                    <button>
+                        <img src="assets/1v1.png" alt="1v1.lol">
+                    </button>
+                    <p>1v1.LOL</p>
                 </div>
-            </a>
-            <a href="/school/3kho/basketball-stars/index.html">
-                <div class="gamecontainer" data-category="all">
-                    <img width="145" height="145" src="assets/basketball-stars.png" loading="lazy">
+                <div class="game-icon" onclick="window.location.href='/school/src/1-on-1-basketball/index.html'">
+                    <button>
+                        <img src="assets/1on1.png" alt="1 On 1 Basketball">
+                    </button>
+                    <p>1 On 1 BasketBall</p>
                 </div>
-            </a>
-            <a href="/school/3kho/baldi/index.html">
-                <div class="gamecontainer" data-category="all">
-                    <img width="145" height="145" src="assets/baldi.png" loading="lazy">
+                <div class="game-icon" onclick="window.location.href='/school/src/1-on-1-football/index.html'">
+                    <button>
+                        <img src="assets/1on1f.png" alt="1 On 1 Football">
+                    </button>
+                    <p>1 On 1 Football</p>
                 </div>
-            </a>
-            <a href="/school/3kho/backrooms/index.html">
-                <div class="gamecontainer" data-category="all">
-                    <img width="145" height="145" src="assets/backrooms.png" loading="lazy">
+                <div class="game-icon" onclick="window.location.href='/school/src/basket-bros/index.html'">
+                    <button>
+                        <img src="assets/basketbros.png" alt="basketbros">
+                    </button>
+                    <p>Basket Bros</p>
                 </div>
-            </a>
-            <a href="/school/3kho/backrooms/index.html">
-                <div class="gamecontainer" data-category="all">
-                    <img width="145" height="145" src="assets/bigredbutton.png" loading="lazy">
+                <div class="game-icon" onclick="window.location.href='/school/src/slope/index.html'">
+                    <button>
+                        <img src="assets/slope.png" alt="slope">
+                    </button>
+                    <p>Slope</p>
                 </div>
-            </a>
-
-        </div>
-        </div>
+                <div class="game-icon" onclick="window.location.href='/school/src/baldi/index.html'">
+                    <button>
+                        <img src="assets/baldi.png" alt="slope">
+                    </button>
+                    <p>Baldi's Basics</p>
+                </div>
+                <div class="game-icon" onclick="window.location.href='/school/src/vex6/index.html'">
+                    <button>
+                        <img src="assets/vex6.png" alt="slope">
+                    </button>
+                    <p>Vex 6</p>
+                </div>
+            </div>
     </div>
 </div>
                 </div>
 </body>
+    <script src="/uv/uv.bundle.js"></script>
+    <script src="/uv/uv.config.js"></script>
+    <script src="/assets/register-sw.js"></script>
