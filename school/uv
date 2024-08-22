@@ -1,9 +1,0 @@
-dont use this bitch 
-  <div class="dropdown" style="justify-content: center;">
-                <span>Themes</span>
-                <div class="dropdown-content" align="center">
-                    <button onclick="minttheme()">Mint</button>
-                    <button onclick="ghosttheme()">Ghost</button>
-                    <button onclick="Blue()">Blue</button>
-                </div>
-            </div>
