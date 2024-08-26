@@ -1,68 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <script src="https://kit.fontawesome.com/fcaf79e23b.js" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" id="favicon" href="/assets/img/classroom.png" type="image/png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,1,0">
-    <link rel="stylesheet" href="/assets/css/index.css" />
-    <link rel="stylesheet" href="./assets/css/themes.css" />
+  <head>
+    <script
+      src="https://kit.fontawesome.com/fcaf79e23b.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      id="favicon"
+      href="/assets/img/classroom.png"
+      type="image/png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,1,0"
+    />
     <script src="//cdn.jsdelivr.net/npm/eruda"></script>
-    <script data-transport="libcurl" src="/chemical.js"></script>
- <!-- Google tag (gtag.js) -->
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFWKKRRXLT"></script>
-     <script>
-         window.dataLayer = window.dataLayer || [];
+    <script src="/bearux/index.js" defer></script>
+    <script src="/epox/index.js" defer></script>
+    <script src="/search/uv.bundle.js" defer></script>
+    <script src="/search/uv.config.js" defer></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-WFWKKRRXLT"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-         function gtag() {
-             dataLayer.push(arguments);
-         }
-         gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-         gtag('config', 'G-WFWKKRRXLT');
-     </script>
+      gtag("config", "G-WFWKKRRXLT");
+    </script>
     <title>Google Classroom</title>
 
     <style>
-        body {
-            background-color: linear-gradient(135deg, #1e1e2e, #534158);
-            color:white;
-            margin: none;
-            overflow: hidden;
-        }
+      body {
+        background: linear-gradient(135deg, #1e1e2e, #534158);
+        color: white;
+        margin: 0;
+        overflow: 0;
+      }
 
-        .mainiframe {
-            border: none;
-            outline: none;
-            position: fixed;
-            border-radius: 10px;
-            height: 100vh;
-            width: 100vw;
-            z-index: 999;
-        }
+      .mainiframe {
+        border: none;
+        outline: none;
+        position: fixed;
+        border-radius: 10px;
+        height: 98% !important;
+        width: 100% !important; 
+        padding: none;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .topbar {
+        width: 100vw;
+        height: 1vh;
+        background-color: #171717;
+        overflow: hidden;
+        margin: 0;
+        z-index: 9999999 !important;
+        list-style-type: none;
+        border-radius: 5px;
+        display: table;
+      }
+
+      .topbar li {
+        color: white;
+        border-radius: 5px;
+        height: 40px;
+        width: 40px;
+        justify-content: center;
+        justify-items: center;
+      }
+
+      .topbar li:hover {
+        background-color: #3d3d3d;
+      }
+
+      .topbar li a:visited {
+        color: white;
+      }
+
+      .right-side {
+        right: 0;
+        display: table-cell;
+      }
+
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-    function LoadFrame() {
-        const frame = document.getElementById('frame')
-        localStorage.setItem('url', frame.src)
-    }
+      function LoadFrame() {
+        const frame = document.getElementById("frame");
+        localStorage.setItem("url", frame.src);
+      }
     </script>
-<iframe class="mainiframe" id="frame" onload="setTimeout(function() { LoadFrame(); }, 3000);"></iframe>
+    <div class="body">
+    <div class="topbar">
+      <li><a href="/c/" id="school"><i class="fa-solid fa-gamepad active"></i></a></li>
+      <div class="right-side">
+        <li><span class="material-symbols-outlined" style="cursor: pointer;">
+          arrow_forward_ios
+          </span></li>
+      </div>
+    </div>
+    <iframe
+      class="mainiframe"
+      id="frame"
+    ></iframe>
+    </div>
+  </body>
+  <script type="module">
+    import { BareMuxConnection } from "/bearux/index.mjs";
+    addEventListener("DOMContentLoaded", async (event) => {
+      const frame = document.getElementById("frame");
+      const connection = new BareMux.BareMuxConnection("/bearux/worker.js");
+      const url = localStorage.getItem("url");
 
-</body>
-<script>
-    addEventListener("DOMContentLoaded", (event) => {
-        const frame = document.getElementById('frame')
-        const url = localStorage.getItem('url')
+      //set the transport as epoxy
+      await connection.setTransport("/epox/index.mjs", [
+        { wisp: "wss://immortal2willlose.xyz/wisp/" },
+      ]);
+      //read the url
+      frame.src = url;
 
-        //read the url
-        frame.src = url
+      function captureFrameURL() {
+        //set the localstorage url to the current frame src
+
+        localStorage.setItem('url', frame.src)
+        
+      }
+      setTimeout(captureFrameURL(), 3000);
+
     });
-window.addEventListener("chemicalLoaded", function(e) {
-    new Ultraviolet.BareClient();
-});
-</script>
+  </script>
 </html>

@@ -24,6 +24,16 @@ body {
   color: #ff6666;
 }
 
+.ex3 {
+  color: white;
+  font-size: 30px;
+}
+
+#subtitle {
+color: white;
+font-size: 25px;
+}
+
 .flex-center {
   display: flex;
   justify-content: center;
@@ -36,21 +46,19 @@ body {
 }
 .desc left-margin {
   height: 50px;
-  
 }
 
 #uv-frame {
   width: 99%;
-  left: .5%;
+  left: 0.5%;
   height: 97%;
   border-radius: 10px;
   border: none;
 }
 
 .settingsdisplay {
-  align-items:center;
+  align-items: center;
 }
-
 
 #uv-error {
   color: #ff6666 !important;
@@ -89,19 +97,19 @@ body {
 }
 
 .search {
-    background: none;
-    font-family: inherit;
-    padding: 0px 17px;
-    height: 48px;
-    border: 1px solid rgb(255, 255, 255, 0.2);
-    color: var(--text-color);
-    border-radius: 3px;
-    outline: none;
-    width: 350px;
-    margin-top: 5px;
-    border-radius: 50px;
-    color: #fff;
-    transition: border-radius 0.1s;
+  background: none;
+  font-family: inherit;
+  padding: 0px 17px;
+  height: 48px;
+  border: 1px solid rgb(255, 255, 255, 0.2);
+  color: var(--text-color);
+  border-radius: 3px;
+  outline: none;
+  width: 350px;
+  margin-top: 5px;
+  border-radius: 50px;
+  color: #fff;
+  transition: border-radius 0.1s;
 }
 
 .logo {
@@ -177,7 +185,7 @@ footer a:hover {
   border-radius: 6px;
 }
 
-    .navbar {
+.navbar {
   background-color: #333333;
   color: #fff;
   padding: 10px 0;
@@ -190,9 +198,9 @@ footer a:hover {
 }
 
 .icon {
-background-color: #171717;
-width:50px;
-height: 50px;
+  background-color: #171717;
+  width: 50px;
+  height: 50px;
 }
 
 .container {
@@ -208,17 +216,17 @@ height: 50px;
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
   border-radius: 5px;
 }
- 
+
 ::-webkit-scrollbar-thumb {
-  background: #16263e; 
+  background: #16263e;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #16263e; 
+  background: #16263e;
 }
 .logo {
   font-size: 24px;
@@ -268,11 +276,11 @@ height: 50px;
   z-index: 1;
 }
 
-  .search:focus::placeholder {
-      color: floralwhite;
-      padding: 20px 15px;
-      z-index: 1;
-  }
+.search:focus::placeholder {
+  color: floralwhite;
+  padding: 20px 15px;
+  z-index: 1;
+}
 
 .material-symbols-outlined {
   padding: 10px;
@@ -300,7 +308,7 @@ xn {
 
 input {
   background: none;
-  font-family: 'Be Vietnam Pro', sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   padding: 0px 17px;
   border: none;
   height: 20px;
@@ -314,19 +322,20 @@ input {
 }
 
 .nav-links li a:hover {
-color: #ff6666 ;
+  color: #ff6666;
 }
 
-.material-symbols-outlined /* add the styles for the symbols*/ {
-font-variation-settings:
-'FILL' 0,
-'wght' 500,
-'GRAD' 200,
-'opsz' 48
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 500,
+    "GRAD" 200,
+    "opsz" 48;
 }
 
 .button2 {
   color: white;
+  font-family: "Be Vietnam Pro", sans-serif;
   background-color: #333333;
   min-width: 300px;
   border-radius: 5px;
@@ -337,6 +346,96 @@ font-variation-settings:
 }
 
 .button2:active {
-  transform: scale(0.90);
+  transform: scale(0.9);
 }
 
+.trendingtop {
+  width: 98%;
+  background-color: #333333;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 10%;
+  color: white;
+  border-bottom: 3px solid white;
+}
+
+.trendingbottom {
+  width: 98%;
+  background-color: #333333;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 20%;
+  color: white;
+}
+
+.active {
+  color: #ff6666;
+}
+
+.game-icon {
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  position: relative;
+
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+  margin: 15px;
+  display: inline-block;
+  flex-wrap: wrap;
+}
+
+.game-icon button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.game-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.game-icon p {
+  margin-top: 10px;
+  color: #fff;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Be Vietnam Pro", sans-serif;
+  opacity: 0;
+  transition:
+    bottom 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  border-radius: 10px;
+}
+
+.game-icon:hover {
+  transform: scale(1.1);
+}
+
+.game-icon:hover img {
+  transform: scale(1.1);
+  border-radius: 15px;
+}
+
+.game-icon:hover p {
+  bottom: 0;
+  opacity: 1;
+}
